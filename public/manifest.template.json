@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "__NAME__",
+  "description": "__DESCRIPTION__",
+  "version": "__VERSION__",
+  "action": {
+    "default_title": "__NAME__"
+  },
+  "icons": {
+    "16": "assets/icon16.png",
+    "32": "assets/icon32.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  },
+  "permissions": [
+    "cookies",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "__APP_ORIGIN__/*",
+    "https://app.slack.com/*",
+    "https://slack.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "__APP_ORIGIN__/*"
+      ],
+      "js": ["bridge.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
+}

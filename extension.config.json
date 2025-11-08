@@ -1,0 +1,8 @@
+{
+  "name": "Idle Pilot",
+  "description": "A simple extension to link your Slack account to Idle Pilot.",
+  "version": "1.2.1",
+  "appOrigin": "https://app.idlepilot.com",
+  "channel": "idlepilot-ext-bridge",
+  "portName": "idlepilot-bridge"
+}
